@@ -1,0 +1,13 @@
+supplier_id,supplier_name,supplier_type,lead_time_days,reliability_score,quality_score,fill_rate,cost_factor,risk_score,capacity_units
+SUP001,Global Foods Distribution,Strategic,10,97,94,98,1.167,11,10000
+SUP002,Prime Consumer Goods,Strategic,9,97,94,95,1.121,7,10000
+SUP003,Metro Wholesale Partners,Balanced,10,84,81,87,1.033,20,7000
+SUP004,Retail Source Network,Balanced,6,84,80,91,1.011,27,7000
+SUP005,Evergreen Supply Chain,Balanced,8,88,80,90,1.011,24,7000
+SUP006,ValueMart Procurement,Cost,12,76,76,84,0.868,32,12000
+SUP007,Budget Goods Supply,Cost,14,83,76,85,0.84,47,12000
+SUP008,CostEdge Distributors,Cost,13,78,71,73,0.753,31,12000
+SUP009,Rapid Fulfillment Services,Emergency,4,91,91,97,1.45,12,3000
+SUP010,Express Supply Solutions,Emergency,2,85,83,86,1.399,11,3000
+SUP011,West Coast Retail Supply,Regional,8,80,80,84,1.014,37,5000
+SUP012,Heartland Distribution Group,Regional,4,86,76,84,1.079,33,5000

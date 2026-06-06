@@ -1,0 +1,401 @@
+item_id,product_name,brand,unit_size,dept_id
+FOODS_2_197,HealthyStart Energy Drink 1,HealthyStart,24 Pack,FOODS_2
+FOODS_2_019,FreshAir Fruit Juice 2,FreshAir,250ml,FOODS_2
+HOUSEHOLD_1_032,CleanPro Toilet Paper 3,CleanPro,750g,HOUSEHOLD_1
+HOUSEHOLD_1_535,Sparkle Fabric Softener 4,Sparkle,2L,HOUSEHOLD_1
+FOODS_2_244,DairyFresh Vanilla Ice Cream 5,DairyFresh,2L,FOODS_2
+HOUSEHOLD_1_110,QuickBite Glass Cleaner 6,QuickBite,250ml,HOUSEHOLD_1
+FOODS_2_276,DairyFresh Chocolate Cookies 7,DairyFresh,500ml,FOODS_2
+FOODS_2_052,SoftHome Chocolate Cookies 8,SoftHome,250ml,FOODS_2
+HOUSEHOLD_1_053,SoftHome Laundry Detergent 9,SoftHome,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_106,PowerRush Bathroom Cleaner 10,PowerRush,250g,HOUSEHOLD_1
+HOUSEHOLD_1_272,SoftHome Multi Surface Spray 11,SoftHome,750g,HOUSEHOLD_1
+HOUSEHOLD_1_096,CreamWorld Bathroom Cleaner 12,CreamWorld,1kg,HOUSEHOLD_1
+HOUSEHOLD_1_514,SnackMax Glass Cleaner 13,SnackMax,750g,HOUSEHOLD_1
+HOUSEHOLD_1_494,SnackMax Toilet Paper 14,SnackMax,6 Pack,HOUSEHOLD_1
+FOODS_2_131,GoldenGrain Energy Drink 15,GoldenGrain,1kg,FOODS_2
+FOODS_2_347,GoldenGrain Cup Noodles 16,GoldenGrain,12 Pack,FOODS_2
+HOUSEHOLD_1_497,CleanPro Floor Cleaner 17,CleanPro,250ml,HOUSEHOLD_1
+FOODS_2_349,HealthyStart Chocolate Cookies 18,HealthyStart,1L,FOODS_2
+FOODS_2_183,FreshAir Chicken Nuggets 19,FreshAir,2L,FOODS_2
+HOUSEHOLD_1_066,MorningBrew Tissue Box 20,MorningBrew,250g,HOUSEHOLD_1
+HOUSEHOLD_1_409,GoldenGrain Toilet Cleaner 21,GoldenGrain,2L,HOUSEHOLD_1
+FOODS_2_029,GoldenGrain Vanilla Ice Cream 22,GoldenGrain,500ml,FOODS_2
+HOUSEHOLD_1_165,HealthyStart Multi Surface Spray 23,HealthyStart,500ml,HOUSEHOLD_1
+HOUSEHOLD_1_140,CleanPro Furniture Polish 24,CleanPro,500g,HOUSEHOLD_1
+FOODS_1_170,NatureSip Digestive Biscuits 25,NatureSip,1kg,FOODS_1
+FOODS_2_293,FarmFresh Cup Noodles 26,FarmFresh,2L,FOODS_2
+FOODS_1_012,CreamWorld Peanut Butter 27,CreamWorld,6 Pack,FOODS_1
+HOUSEHOLD_1_338,SnackMax Air Freshener 28,SnackMax,500g,HOUSEHOLD_1
+HOUSEHOLD_1_072,SnackMax Tissue Box 29,SnackMax,2L,HOUSEHOLD_1
+FOODS_1_004,PowerRush Pasta 30,PowerRush,250g,FOODS_1
+FOODS_2_222,PowerRush Energy Drink 31,PowerRush,2L,FOODS_2
+HOUSEHOLD_1_469,SoftHome Laundry Detergent 32,SoftHome,2L,HOUSEHOLD_1
+HOUSEHOLD_1_027,MorningBrew Fabric Softener 33,MorningBrew,250g,HOUSEHOLD_1
+FOODS_2_371,MorningBrew Fruit Juice 34,MorningBrew,750g,FOODS_2
+FOODS_2_030,Sparkle Potato Chips 35,Sparkle,250ml,FOODS_2
+HOUSEHOLD_1_347,CreamWorld Multi Surface Spray 36,CreamWorld,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_429,SoftHome Floor Cleaner 37,SoftHome,1L,HOUSEHOLD_1
+HOUSEHOLD_1_440,DairyFresh Floor Cleaner 38,DairyFresh,500g,HOUSEHOLD_1
+HOUSEHOLD_1_310,CreamWorld Laundry Detergent 39,CreamWorld,1L,HOUSEHOLD_1
+FOODS_1_087,MorningBrew Arabica Coffee 40,MorningBrew,2L,FOODS_1
+HOUSEHOLD_1_177,FreshHarvest Glass Cleaner 41,FreshHarvest,750g,HOUSEHOLD_1
+HOUSEHOLD_1_191,FarmFresh Trash Bags 42,FarmFresh,750g,HOUSEHOLD_1
+FOODS_2_082,SnackMax Potato Chips 43,SnackMax,12 Pack,FOODS_2
+FOODS_2_060,CreamWorld Cup Noodles 44,CreamWorld,24 Pack,FOODS_2
+FOODS_1_043,FarmFresh Cooking Oil 45,FarmFresh,12 Pack,FOODS_1
+HOUSEHOLD_1_410,SoftHome Multi Surface Spray 46,SoftHome,750g,HOUSEHOLD_1
+FOODS_2_101,FreshHarvest Energy Drink 47,FreshHarvest,1kg,FOODS_2
+HOUSEHOLD_1_457,NatureSip Toilet Cleaner 48,NatureSip,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_373,FreshAir Toilet Paper 49,FreshAir,24 Pack,HOUSEHOLD_1
+FOODS_2_181,FreshAir Vanilla Ice Cream 50,FreshAir,1L,FOODS_2
+HOUSEHOLD_1_304,QuickBite Room Spray 51,QuickBite,500g,HOUSEHOLD_1
+FOODS_2_056,FreshAir Instant Noodles 52,FreshAir,6 Pack,FOODS_2
+FOODS_2_342,SoftHome Chocolate Bar 53,SoftHome,1kg,FOODS_2
+HOUSEHOLD_1_100,CleanPro Fabric Softener 54,CleanPro,1L,HOUSEHOLD_1
+FOODS_2_194,NatureSip Energy Drink 55,NatureSip,250g,FOODS_2
+HOUSEHOLD_1_068,PowerRush Laundry Detergent 56,PowerRush,24 Pack,HOUSEHOLD_1
+FOODS_1_055,FreshAir Hot Chocolate 57,FreshAir,6 Pack,FOODS_1
+FOODS_1_218,CreamWorld Brown Sugar 58,CreamWorld,500ml,FOODS_1
+HOUSEHOLD_1_040,Sparkle Air Freshener 59,Sparkle,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_473,FreshHarvest Trash Bags 60,FreshHarvest,750g,HOUSEHOLD_1
+FOODS_1_110,SoftHome Digestive Biscuits 61,SoftHome,2L,FOODS_1
+FOODS_2_233,Sparkle Protein Bar 62,Sparkle,500ml,FOODS_2
+HOUSEHOLD_1_038,HealthyStart Floor Cleaner 63,HealthyStart,250g,HOUSEHOLD_1
+FOODS_2_184,CleanPro Sandwich Cookies 64,CleanPro,1kg,FOODS_2
+FOODS_1_099,NatureSip Black Tea 65,NatureSip,1L,FOODS_1
+FOODS_2_241,MorningBrew Chocolate Cookies 66,MorningBrew,250g,FOODS_2
+FOODS_2_173,FreshHarvest Greek Yogurt 67,FreshHarvest,2L,FOODS_2
+FOODS_2_299,Sparkle Sandwich Cookies 68,Sparkle,250g,FOODS_2
+HOUSEHOLD_1_249,GoldenGrain Dishwashing Liquid 69,GoldenGrain,500ml,HOUSEHOLD_1
+HOUSEHOLD_1_539,FreshHarvest Trash Bags 70,FreshHarvest,250g,HOUSEHOLD_1
+HOUSEHOLD_1_169,NatureSip Room Spray 71,NatureSip,500g,HOUSEHOLD_1
+FOODS_1_085,CleanPro Black Tea 72,CleanPro,500ml,FOODS_1
+HOUSEHOLD_1_292,CreamWorld Toilet Cleaner 73,CreamWorld,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_294,FarmFresh Surface Wipes 74,FarmFresh,500ml,HOUSEHOLD_1
+HOUSEHOLD_1_541,HealthyStart Trash Bags 75,HealthyStart,500g,HOUSEHOLD_1
+FOODS_2_078,QuickBite Chocolate Bar 76,QuickBite,24 Pack,FOODS_2
+HOUSEHOLD_1_050,FreshHarvest Hand Wash 77,FreshHarvest,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_086,FreshAir Paper Towels 78,FreshAir,750g,HOUSEHOLD_1
+HOUSEHOLD_1_051,SoftHome Bleach Cleaner 79,SoftHome,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_130,MorningBrew Toilet Cleaner 80,MorningBrew,12 Pack,HOUSEHOLD_1
+FOODS_2_112,FarmFresh Frozen Pizza 81,FarmFresh,750g,FOODS_2
+FOODS_2_346,CreamWorld Snack Crackers 82,CreamWorld,1kg,FOODS_2
+FOODS_2_380,FreshHarvest Frozen Vegetables 83,FreshHarvest,2L,FOODS_2
+FOODS_1_183,GoldenGrain Corn Flakes 84,GoldenGrain,2L,FOODS_1
+HOUSEHOLD_1_418,Sparkle Laundry Detergent 85,Sparkle,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_079,CreamWorld Furniture Polish 86,CreamWorld,12 Pack,HOUSEHOLD_1
+FOODS_1_086,CreamWorld Brown Sugar 87,CreamWorld,12 Pack,FOODS_1
+HOUSEHOLD_1_334,PowerRush Hand Wash 88,PowerRush,1kg,HOUSEHOLD_1
+FOODS_1_217,GoldenGrain Mayonnaise 89,GoldenGrain,250g,FOODS_1
+FOODS_1_173,NatureSip Tomato Ketchup 90,NatureSip,250ml,FOODS_1
+FOODS_2_036,Sparkle Greek Yogurt 91,Sparkle,1L,FOODS_2
+HOUSEHOLD_1_387,PowerRush Floor Cleaner 92,PowerRush,750g,HOUSEHOLD_1
+FOODS_1_161,MorningBrew Instant Coffee 93,MorningBrew,1kg,FOODS_1
+FOODS_2_359,DairyFresh Potato Chips 94,DairyFresh,1kg,FOODS_2
+FOODS_2_074,FreshHarvest Cheese Slices 95,FreshHarvest,2L,FOODS_2
+FOODS_2_274,QuickBite Vanilla Ice Cream 96,QuickBite,2L,FOODS_2
+FOODS_1_162,NatureSip Hot Chocolate 97,NatureSip,750g,FOODS_1
+FOODS_2_150,NatureSip Soft Drink 98,NatureSip,6 Pack,FOODS_2
+HOUSEHOLD_1_197,PowerRush Glass Cleaner 99,PowerRush,500g,HOUSEHOLD_1
+HOUSEHOLD_1_328,GoldenGrain Garbage Liners 100,GoldenGrain,500g,HOUSEHOLD_1
+HOUSEHOLD_1_361,FreshAir Glass Cleaner 101,FreshAir,6 Pack,HOUSEHOLD_1
+FOODS_1_023,FreshHarvest Premium Salt 102,FreshHarvest,1kg,FOODS_1
+FOODS_1_018,NatureSip Organic Rice 103,NatureSip,250ml,FOODS_1
+HOUSEHOLD_1_437,HealthyStart Hand Wash 104,HealthyStart,2L,HOUSEHOLD_1
+HOUSEHOLD_1_118,CreamWorld Air Freshener 105,CreamWorld,750g,HOUSEHOLD_1
+FOODS_2_054,FreshHarvest Sandwich Cookies 106,FreshHarvest,24 Pack,FOODS_2
+HOUSEHOLD_1_376,QuickBite Room Spray 107,QuickBite,1L,HOUSEHOLD_1
+HOUSEHOLD_1_370,NatureSip Garbage Liners 108,NatureSip,500ml,HOUSEHOLD_1
+FOODS_1_194,FreshAir Green Tea 109,FreshAir,750g,FOODS_1
+HOUSEHOLD_1_408,Sparkle Air Freshener 110,Sparkle,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_517,SnackMax Dishwashing Liquid 111,SnackMax,250g,HOUSEHOLD_1
+FOODS_1_200,FreshHarvest Honey 112,FreshHarvest,250ml,FOODS_1
+HOUSEHOLD_1_014,MorningBrew Hand Wash 113,MorningBrew,1kg,HOUSEHOLD_1
+FOODS_1_104,FreshHarvest Brown Sugar 114,FreshHarvest,250g,FOODS_1
+HOUSEHOLD_1_318,SoftHome Bathroom Cleaner 115,SoftHome,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_498,MorningBrew Paper Towels 116,MorningBrew,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_119,DairyFresh Trash Bags 117,DairyFresh,250g,HOUSEHOLD_1
+HOUSEHOLD_1_204,SnackMax Garbage Liners 118,SnackMax,750g,HOUSEHOLD_1
+FOODS_2_304,HealthyStart Potato Chips 119,HealthyStart,250ml,FOODS_2
+HOUSEHOLD_1_465,MorningBrew Laundry Detergent 120,MorningBrew,500g,HOUSEHOLD_1
+FOODS_1_152,FarmFresh Digestive Biscuits 121,FarmFresh,500ml,FOODS_1
+HOUSEHOLD_1_055,DairyFresh Glass Cleaner 122,DairyFresh,2L,HOUSEHOLD_1
+HOUSEHOLD_1_214,FarmFresh Furniture Polish 123,FarmFresh,500ml,HOUSEHOLD_1
+HOUSEHOLD_1_291,FarmFresh Dishwashing Liquid 124,FarmFresh,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_071,GoldenGrain Multi Surface Spray 125,GoldenGrain,12 Pack,HOUSEHOLD_1
+FOODS_2_307,DairyFresh Sandwich Cookies 126,DairyFresh,250g,FOODS_2
+HOUSEHOLD_1_048,Sparkle Floor Cleaner 127,Sparkle,500ml,HOUSEHOLD_1
+FOODS_2_014,CreamWorld Soft Drink 128,CreamWorld,12 Pack,FOODS_2
+FOODS_2_013,GoldenGrain Frozen Pizza 129,GoldenGrain,6 Pack,FOODS_2
+HOUSEHOLD_1_369,SoftHome Kitchen Cleaner 130,SoftHome,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_282,PowerRush Toilet Paper 131,PowerRush,1kg,HOUSEHOLD_1
+FOODS_1_080,HealthyStart Pasta 132,HealthyStart,250g,FOODS_1
+FOODS_2_164,NatureSip Fruit Juice 133,NatureSip,750g,FOODS_2
+HOUSEHOLD_1_510,SoftHome Tissue Box 134,SoftHome,500g,HOUSEHOLD_1
+HOUSEHOLD_1_447,CreamWorld Dishwashing Liquid 135,CreamWorld,500ml,HOUSEHOLD_1
+FOODS_2_360,PowerRush Flavored Yogurt 136,PowerRush,12 Pack,FOODS_2
+HOUSEHOLD_1_180,HealthyStart Surface Wipes 137,HealthyStart,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_453,FarmFresh Paper Towels 138,FarmFresh,500ml,HOUSEHOLD_1
+FOODS_2_325,SoftHome Cheese Slices 139,SoftHome,250ml,FOODS_2
+FOODS_2_315,DairyFresh Potato Chips 140,DairyFresh,250ml,FOODS_2
+HOUSEHOLD_1_090,SoftHome Bathroom Cleaner 141,SoftHome,250ml,HOUSEHOLD_1
+FOODS_2_139,HealthyStart Energy Drink 142,HealthyStart,500ml,FOODS_2
+HOUSEHOLD_1_434,HealthyStart Kitchen Cleaner 143,HealthyStart,750g,HOUSEHOLD_1
+HOUSEHOLD_1_518,HealthyStart Air Freshener 144,HealthyStart,500g,HOUSEHOLD_1
+FOODS_1_021,NatureSip Digestive Biscuits 145,NatureSip,750g,FOODS_1
+FOODS_1_172,DairyFresh Mayonnaise 146,DairyFresh,750g,FOODS_1
+FOODS_1_046,CleanPro Arabica Coffee 147,CleanPro,250ml,FOODS_1
+HOUSEHOLD_1_093,SoftHome Floor Cleaner 148,SoftHome,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_246,CleanPro Laundry Detergent 149,CleanPro,12 Pack,HOUSEHOLD_1
+FOODS_1_103,FarmFresh Organic Rice 150,FarmFresh,500g,FOODS_1
+HOUSEHOLD_1_345,PowerRush Hand Wash 151,PowerRush,2L,HOUSEHOLD_1
+HOUSEHOLD_1_399,SnackMax Kitchen Cleaner 152,SnackMax,250g,HOUSEHOLD_1
+FOODS_1_058,FreshAir Tomato Ketchup 153,FreshAir,1L,FOODS_1
+FOODS_1_067,QuickBite Arabica Coffee 154,QuickBite,1L,FOODS_1
+FOODS_2_016,SoftHome Frozen Pizza 155,SoftHome,12 Pack,FOODS_2
+HOUSEHOLD_1_087,MorningBrew Hand Wash 156,MorningBrew,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_386,SoftHome Garbage Liners 157,SoftHome,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_538,FreshHarvest Tissue Box 158,FreshHarvest,1kg,HOUSEHOLD_1
+FOODS_2_255,SoftHome Greek Yogurt 159,SoftHome,12 Pack,FOODS_2
+HOUSEHOLD_1_045,SnackMax Hand Wash 160,SnackMax,1L,HOUSEHOLD_1
+HOUSEHOLD_1_129,FreshHarvest Toilet Cleaner 161,FreshHarvest,250ml,HOUSEHOLD_1
+FOODS_2_388,QuickBite Instant Noodles 162,QuickBite,250ml,FOODS_2
+FOODS_2_153,GoldenGrain Vanilla Ice Cream 163,GoldenGrain,1kg,FOODS_2
+HOUSEHOLD_1_416,CleanPro Multi Surface Spray 164,CleanPro,750g,HOUSEHOLD_1
+HOUSEHOLD_1_235,DairyFresh Laundry Detergent 165,DairyFresh,250ml,HOUSEHOLD_1
+FOODS_2_396,HealthyStart Frozen Fries 166,HealthyStart,2L,FOODS_2
+HOUSEHOLD_1_016,CreamWorld Hand Wash 167,CreamWorld,500g,HOUSEHOLD_1
+HOUSEHOLD_1_321,SoftHome Surface Wipes 168,SoftHome,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_459,DairyFresh Bleach Cleaner 169,DairyFresh,500g,HOUSEHOLD_1
+FOODS_2_175,SoftHome Frozen Pizza 170,SoftHome,250g,FOODS_2
+FOODS_2_047,FreshAir Potato Chips 171,FreshAir,750g,FOODS_2
+HOUSEHOLD_1_082,SnackMax Fabric Softener 172,SnackMax,750g,HOUSEHOLD_1
+FOODS_1_050,FreshHarvest Organic Rice 173,FreshHarvest,2L,FOODS_1
+FOODS_1_088,Sparkle Digestive Biscuits 174,Sparkle,500g,FOODS_1
+HOUSEHOLD_1_427,GoldenGrain Room Spray 175,GoldenGrain,750g,HOUSEHOLD_1
+HOUSEHOLD_1_058,CleanPro Surface Wipes 176,CleanPro,2L,HOUSEHOLD_1
+HOUSEHOLD_1_411,CleanPro Multi Surface Spray 177,CleanPro,500g,HOUSEHOLD_1
+HOUSEHOLD_1_285,PowerRush Room Spray 178,PowerRush,1L,HOUSEHOLD_1
+HOUSEHOLD_1_236,CleanPro Toilet Cleaner 179,CleanPro,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_351,FreshAir Furniture Polish 180,FreshAir,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_506,PowerRush Toilet Cleaner 181,PowerRush,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_243,CleanPro Toilet Cleaner 182,CleanPro,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_188,DairyFresh Floor Cleaner 183,DairyFresh,750g,HOUSEHOLD_1
+FOODS_2_374,MorningBrew Sandwich Cookies 184,MorningBrew,1kg,FOODS_2
+HOUSEHOLD_1_383,FreshHarvest Furniture Polish 185,FreshHarvest,1L,HOUSEHOLD_1
+FOODS_1_219,SoftHome Arabica Coffee 186,SoftHome,250g,FOODS_1
+HOUSEHOLD_1_203,CreamWorld Kitchen Cleaner 187,CreamWorld,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_254,PowerRush Glass Cleaner 188,PowerRush,250g,HOUSEHOLD_1
+FOODS_2_212,NatureSip Sandwich Cookies 189,NatureSip,1kg,FOODS_2
+HOUSEHOLD_1_151,PowerRush Hand Wash 190,PowerRush,500ml,HOUSEHOLD_1
+FOODS_2_119,Sparkle Frozen Fries 191,Sparkle,750g,FOODS_2
+FOODS_2_204,HealthyStart Sandwich Cookies 192,HealthyStart,6 Pack,FOODS_2
+HOUSEHOLD_1_153,SoftHome Room Spray 193,SoftHome,6 Pack,HOUSEHOLD_1
+FOODS_1_154,SoftHome Corn Flakes 194,SoftHome,1kg,FOODS_1
+HOUSEHOLD_1_202,CleanPro Room Spray 195,CleanPro,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_477,MorningBrew Trash Bags 196,MorningBrew,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_186,Sparkle Bleach Cleaner 197,Sparkle,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_303,SnackMax Toilet Cleaner 198,SnackMax,1L,HOUSEHOLD_1
+HOUSEHOLD_1_521,PowerRush Hand Wash 199,PowerRush,1L,HOUSEHOLD_1
+HOUSEHOLD_1_225,SnackMax Kitchen Cleaner 200,SnackMax,12 Pack,HOUSEHOLD_1
+FOODS_1_045,NatureSip Corn Flakes 201,NatureSip,12 Pack,FOODS_1
+FOODS_2_152,MorningBrew Greek Yogurt 202,MorningBrew,1L,FOODS_2
+FOODS_2_357,Sparkle Cheese Slices 203,Sparkle,500g,FOODS_2
+FOODS_1_137,SoftHome Honey 204,SoftHome,6 Pack,FOODS_1
+FOODS_2_063,CleanPro Instant Noodles 205,CleanPro,250g,FOODS_2
+HOUSEHOLD_1_505,CreamWorld Paper Towels 206,CreamWorld,2L,HOUSEHOLD_1
+HOUSEHOLD_1_339,PowerRush Multi Surface Spray 207,PowerRush,500g,HOUSEHOLD_1
+FOODS_1_163,SnackMax Whole Wheat Flour 208,SnackMax,250ml,FOODS_1
+FOODS_2_311,MorningBrew Chocolate Bar 209,MorningBrew,2L,FOODS_2
+HOUSEHOLD_1_262,FreshAir Hand Wash 210,FreshAir,250g,HOUSEHOLD_1
+FOODS_1_207,FreshHarvest Hot Chocolate 211,FreshHarvest,1L,FOODS_1
+FOODS_1_206,HealthyStart Pasta 212,HealthyStart,1kg,FOODS_1
+FOODS_2_247,SoftHome Chocolate Bar 213,SoftHome,750g,FOODS_2
+FOODS_2_285,QuickBite Chicken Nuggets 214,QuickBite,1L,FOODS_2
+HOUSEHOLD_1_223,CleanPro Multi Surface Spray 215,CleanPro,750g,HOUSEHOLD_1
+HOUSEHOLD_1_438,NatureSip Toilet Paper 216,NatureSip,750g,HOUSEHOLD_1
+HOUSEHOLD_1_196,FreshAir Kitchen Cleaner 217,FreshAir,500g,HOUSEHOLD_1
+HOUSEHOLD_1_385,SoftHome Bleach Cleaner 218,SoftHome,2L,HOUSEHOLD_1
+HOUSEHOLD_1_109,CreamWorld Floor Cleaner 219,CreamWorld,250g,HOUSEHOLD_1
+FOODS_2_309,FreshAir Frozen Pizza 220,FreshAir,6 Pack,FOODS_2
+FOODS_2_109,PowerRush Sandwich Cookies 221,PowerRush,2L,FOODS_2
+FOODS_1_040,QuickBite Organic Rice 222,QuickBite,250ml,FOODS_1
+HOUSEHOLD_1_359,CleanPro Paper Towels 223,CleanPro,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_327,QuickBite Hand Wash 224,QuickBite,250ml,HOUSEHOLD_1
+FOODS_1_153,SoftHome Basmati Rice 225,SoftHome,250ml,FOODS_1
+HOUSEHOLD_1_346,MorningBrew Toilet Cleaner 226,MorningBrew,750g,HOUSEHOLD_1
+FOODS_2_128,PowerRush Snack Crackers 227,PowerRush,500g,FOODS_2
+FOODS_2_126,PowerRush Protein Bar 228,PowerRush,250g,FOODS_2
+FOODS_1_130,FarmFresh Peanut Butter 229,FarmFresh,250g,FOODS_1
+HOUSEHOLD_1_414,CreamWorld Glass Cleaner 230,CreamWorld,6 Pack,HOUSEHOLD_1
+FOODS_1_061,SoftHome Basmati Rice 231,SoftHome,12 Pack,FOODS_1
+HOUSEHOLD_1_047,DairyFresh Hand Wash 232,DairyFresh,500ml,HOUSEHOLD_1
+FOODS_2_326,DairyFresh Chicken Nuggets 233,DairyFresh,250ml,FOODS_2
+HOUSEHOLD_1_205,CleanPro Air Freshener 234,CleanPro,1kg,HOUSEHOLD_1
+FOODS_2_232,CleanPro Fruit Juice 235,CleanPro,500g,FOODS_2
+FOODS_1_115,PowerRush Arabica Coffee 236,PowerRush,1kg,FOODS_1
+HOUSEHOLD_1_540,PowerRush Surface Wipes 237,PowerRush,250g,HOUSEHOLD_1
+FOODS_1_166,FreshAir Hot Chocolate 238,FreshAir,750g,FOODS_1
+HOUSEHOLD_1_132,GoldenGrain Paper Towels 239,GoldenGrain,750g,HOUSEHOLD_1
+FOODS_1_074,FarmFresh Arabica Coffee 240,FarmFresh,6 Pack,FOODS_1
+HOUSEHOLD_1_122,CleanPro Dishwashing Liquid 241,CleanPro,2L,HOUSEHOLD_1
+HOUSEHOLD_1_173,Sparkle Furniture Polish 242,Sparkle,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_443,QuickBite Laundry Detergent 243,QuickBite,250g,HOUSEHOLD_1
+FOODS_2_081,FarmFresh Ice Pops 244,FarmFresh,250g,FOODS_2
+HOUSEHOLD_1_094,SnackMax Fabric Softener 245,SnackMax,12 Pack,HOUSEHOLD_1
+FOODS_2_004,FreshAir Sandwich Cookies 246,FreshAir,250g,FOODS_2
+HOUSEHOLD_1_478,PowerRush Dishwashing Liquid 247,PowerRush,750g,HOUSEHOLD_1
+HOUSEHOLD_1_019,SnackMax Laundry Detergent 248,SnackMax,1L,HOUSEHOLD_1
+FOODS_1_036,SoftHome Green Tea 249,SoftHome,250g,FOODS_1
+FOODS_2_376,FarmFresh Greek Yogurt 250,FarmFresh,250ml,FOODS_2
+HOUSEHOLD_1_261,MorningBrew Paper Towels 251,MorningBrew,250ml,HOUSEHOLD_1
+FOODS_1_082,SnackMax Arabica Coffee 252,SnackMax,250ml,FOODS_1
+FOODS_1_181,CleanPro Digestive Biscuits 253,CleanPro,750g,FOODS_1
+HOUSEHOLD_1_482,SnackMax Surface Wipes 254,SnackMax,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_389,FreshHarvest Garbage Liners 255,FreshHarvest,750g,HOUSEHOLD_1
+HOUSEHOLD_1_275,FreshAir Kitchen Cleaner 256,FreshAir,1kg,HOUSEHOLD_1
+HOUSEHOLD_1_112,FreshHarvest Laundry Detergent 257,FreshHarvest,2L,HOUSEHOLD_1
+HOUSEHOLD_1_448,SoftHome Dishwashing Liquid 258,SoftHome,2L,HOUSEHOLD_1
+HOUSEHOLD_1_516,CleanPro Toilet Paper 259,CleanPro,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_348,QuickBite Dishwashing Liquid 260,QuickBite,500ml,HOUSEHOLD_1
+FOODS_1_042,Sparkle Brown Sugar 261,Sparkle,500g,FOODS_1
+FOODS_2_075,FreshHarvest Chicken Nuggets 262,FreshHarvest,500ml,FOODS_2
+FOODS_1_054,SnackMax Black Tea 263,SnackMax,24 Pack,FOODS_1
+HOUSEHOLD_1_179,FarmFresh Surface Wipes 264,FarmFresh,1L,HOUSEHOLD_1
+FOODS_1_064,SnackMax Honey 265,SnackMax,250ml,FOODS_1
+HOUSEHOLD_1_445,GoldenGrain Garbage Liners 266,GoldenGrain,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_380,CreamWorld Room Spray 267,CreamWorld,500ml,HOUSEHOLD_1
+FOODS_1_006,QuickBite Whole Wheat Flour 268,QuickBite,500g,FOODS_1
+FOODS_2_170,GoldenGrain Chocolate Cookies 269,GoldenGrain,24 Pack,FOODS_2
+FOODS_2_145,FarmFresh Flavored Yogurt 270,FarmFresh,500g,FOODS_2
+FOODS_2_061,PowerRush Snack Crackers 271,PowerRush,500ml,FOODS_2
+HOUSEHOLD_1_283,DairyFresh Laundry Detergent 272,DairyFresh,1L,HOUSEHOLD_1
+HOUSEHOLD_1_175,MorningBrew Multi Surface Spray 273,MorningBrew,250g,HOUSEHOLD_1
+FOODS_2_267,FreshAir Greek Yogurt 274,FreshAir,1kg,FOODS_2
+HOUSEHOLD_1_124,DairyFresh Multi Surface Spray 275,DairyFresh,250g,HOUSEHOLD_1
+FOODS_2_024,FreshHarvest Instant Noodles 276,FreshHarvest,1kg,FOODS_2
+FOODS_2_327,GoldenGrain Greek Yogurt 277,GoldenGrain,500ml,FOODS_2
+FOODS_1_083,FreshAir Whole Wheat Flour 278,FreshAir,24 Pack,FOODS_1
+FOODS_1_112,Sparkle Basmati Rice 279,Sparkle,750g,FOODS_1
+HOUSEHOLD_1_319,PowerRush Tissue Box 280,PowerRush,1L,HOUSEHOLD_1
+FOODS_2_192,FarmFresh Soft Drink 281,FarmFresh,24 Pack,FOODS_2
+HOUSEHOLD_1_007,DairyFresh Hand Wash 282,DairyFresh,1kg,HOUSEHOLD_1
+FOODS_2_116,HealthyStart Fruit Juice 283,HealthyStart,2L,FOODS_2
+HOUSEHOLD_1_404,MorningBrew Glass Cleaner 284,MorningBrew,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_426,FreshAir Furniture Polish 285,FreshAir,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_004,MorningBrew Room Spray 286,MorningBrew,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_278,GoldenGrain Trash Bags 287,GoldenGrain,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_277,FreshHarvest Paper Towels 288,FreshHarvest,250ml,HOUSEHOLD_1
+HOUSEHOLD_1_350,SoftHome Floor Cleaner 289,SoftHome,12 Pack,HOUSEHOLD_1
+FOODS_2_053,GoldenGrain Cup Noodles 290,GoldenGrain,250g,FOODS_2
+FOODS_1_201,CleanPro Peanut Butter 291,CleanPro,24 Pack,FOODS_1
+FOODS_2_391,CleanPro Frozen Vegetables 292,CleanPro,6 Pack,FOODS_2
+HOUSEHOLD_1_028,PowerRush Tissue Box 293,PowerRush,500ml,HOUSEHOLD_1
+HOUSEHOLD_1_234,DairyFresh Tissue Box 294,DairyFresh,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_458,FreshAir Hand Wash 295,FreshAir,250g,HOUSEHOLD_1
+HOUSEHOLD_1_479,FreshHarvest Toilet Cleaner 296,FreshHarvest,2L,HOUSEHOLD_1
+HOUSEHOLD_1_232,MorningBrew Surface Wipes 297,MorningBrew,1kg,HOUSEHOLD_1
+HOUSEHOLD_1_439,FarmFresh Tissue Box 298,FarmFresh,2L,HOUSEHOLD_1
+HOUSEHOLD_1_397,CleanPro Garbage Liners 299,CleanPro,1L,HOUSEHOLD_1
+HOUSEHOLD_1_425,DairyFresh Garbage Liners 300,DairyFresh,500g,HOUSEHOLD_1
+HOUSEHOLD_1_198,CleanPro Kitchen Cleaner 301,CleanPro,24 Pack,HOUSEHOLD_1
+FOODS_2_399,CreamWorld Flavored Yogurt 302,CreamWorld,750g,FOODS_2
+FOODS_1_037,CreamWorld Honey 303,CreamWorld,24 Pack,FOODS_1
+FOODS_1_139,SoftHome Honey 304,SoftHome,500g,FOODS_1
+HOUSEHOLD_1_508,MorningBrew Paper Towels 305,MorningBrew,750g,HOUSEHOLD_1
+FOODS_1_044,PowerRush Honey 306,PowerRush,1L,FOODS_1
+FOODS_2_021,SoftHome Greek Yogurt 307,SoftHome,12 Pack,FOODS_2
+FOODS_1_120,PowerRush Corn Flakes 308,PowerRush,250g,FOODS_1
+FOODS_2_051,QuickBite Energy Drink 309,QuickBite,12 Pack,FOODS_2
+FOODS_2_138,PowerRush Chicken Nuggets 310,PowerRush,250g,FOODS_2
+HOUSEHOLD_1_522,HealthyStart Kitchen Cleaner 311,HealthyStart,6 Pack,HOUSEHOLD_1
+FOODS_1_127,CleanPro Premium Salt 312,CleanPro,750g,FOODS_1
+HOUSEHOLD_1_083,FreshAir Floor Cleaner 313,FreshAir,500g,HOUSEHOLD_1
+FOODS_2_283,HealthyStart Protein Bar 314,HealthyStart,500ml,FOODS_2
+FOODS_2_189,FarmFresh Chocolate Cookies 315,FarmFresh,2L,FOODS_2
+FOODS_2_294,FreshHarvest Fruit Juice 316,FreshHarvest,750g,FOODS_2
+HOUSEHOLD_1_337,PowerRush Multi Surface Spray 317,PowerRush,250ml,HOUSEHOLD_1
+FOODS_1_167,HealthyStart Green Tea 318,HealthyStart,12 Pack,FOODS_1
+FOODS_2_220,Sparkle Chocolate Cookies 319,Sparkle,2L,FOODS_2
+FOODS_1_208,QuickBite Pasta 320,QuickBite,250ml,FOODS_1
+HOUSEHOLD_1_528,SnackMax Laundry Detergent 321,SnackMax,500ml,HOUSEHOLD_1
+HOUSEHOLD_1_017,QuickBite Paper Towels 322,QuickBite,1L,HOUSEHOLD_1
+FOODS_1_027,HealthyStart Tomato Ketchup 323,HealthyStart,24 Pack,FOODS_1
+FOODS_2_146,CreamWorld Frozen Vegetables 324,CreamWorld,750g,FOODS_2
+FOODS_2_340,FarmFresh Flavored Yogurt 325,FarmFresh,2L,FOODS_2
+HOUSEHOLD_1_251,HealthyStart Trash Bags 326,HealthyStart,2L,HOUSEHOLD_1
+FOODS_1_184,GoldenGrain Green Tea 327,GoldenGrain,1kg,FOODS_1
+FOODS_2_356,HealthyStart Cheese Slices 328,HealthyStart,500ml,FOODS_2
+FOODS_2_174,NatureSip Sandwich Cookies 329,NatureSip,2L,FOODS_2
+FOODS_2_297,MorningBrew Chocolate Bar 330,MorningBrew,6 Pack,FOODS_2
+HOUSEHOLD_1_353,FarmFresh Dishwashing Liquid 331,FarmFresh,24 Pack,HOUSEHOLD_1
+FOODS_2_003,CleanPro Fruit Juice 332,CleanPro,750g,FOODS_2
+FOODS_2_218,SoftHome Frozen Fries 333,SoftHome,250ml,FOODS_2
+FOODS_1_013,CleanPro Green Tea 334,CleanPro,500ml,FOODS_1
+FOODS_1_134,MorningBrew Premium Salt 335,MorningBrew,1kg,FOODS_1
+FOODS_1_028,HealthyStart Organic Rice 336,HealthyStart,250g,FOODS_1
+FOODS_2_092,FarmFresh Chicken Nuggets 337,FarmFresh,250g,FOODS_2
+FOODS_2_245,QuickBite Cup Noodles 338,QuickBite,250ml,FOODS_2
+HOUSEHOLD_1_372,FarmFresh Fabric Softener 339,FarmFresh,1kg,HOUSEHOLD_1
+HOUSEHOLD_1_101,Sparkle Kitchen Cleaner 340,Sparkle,750g,HOUSEHOLD_1
+FOODS_1_158,QuickBite Organic Rice 341,QuickBite,500g,FOODS_1
+HOUSEHOLD_1_147,SnackMax Multi Surface Spray 342,SnackMax,1L,HOUSEHOLD_1
+HOUSEHOLD_1_008,SoftHome Multi Surface Spray 343,SoftHome,500g,HOUSEHOLD_1
+FOODS_2_289,DairyFresh Frozen Fries 344,DairyFresh,500g,FOODS_2
+FOODS_2_237,FreshHarvest Snack Crackers 345,FreshHarvest,250ml,FOODS_2
+FOODS_2_225,FreshHarvest Frozen Vegetables 346,FreshHarvest,6 Pack,FOODS_2
+FOODS_1_146,FarmFresh Basmati Rice 347,FarmFresh,2L,FOODS_1
+FOODS_2_177,CreamWorld Chocolate Bar 348,CreamWorld,750g,FOODS_2
+HOUSEHOLD_1_215,SnackMax Surface Wipes 349,SnackMax,500g,HOUSEHOLD_1
+FOODS_1_113,SnackMax Peanut Butter 350,SnackMax,2L,FOODS_1
+FOODS_2_058,PowerRush Cheese Slices 351,PowerRush,500g,FOODS_2
+FOODS_2_257,MorningBrew Chicken Nuggets 352,MorningBrew,750g,FOODS_2
+HOUSEHOLD_1_430,DairyFresh Laundry Detergent 353,DairyFresh,500ml,HOUSEHOLD_1
+FOODS_2_385,Sparkle Fruit Juice 354,Sparkle,6 Pack,FOODS_2
+HOUSEHOLD_1_247,NatureSip Trash Bags 355,NatureSip,750g,HOUSEHOLD_1
+FOODS_2_125,SnackMax Greek Yogurt 356,SnackMax,750g,FOODS_2
+FOODS_2_107,CleanPro Cup Noodles 357,CleanPro,1kg,FOODS_2
+FOODS_2_108,CleanPro Frozen Fries 358,CleanPro,6 Pack,FOODS_2
+HOUSEHOLD_1_114,DairyFresh Furniture Polish 359,DairyFresh,2L,HOUSEHOLD_1
+FOODS_1_066,DairyFresh Corn Flakes 360,DairyFresh,750g,FOODS_1
+FOODS_1_032,FreshHarvest Green Tea 361,FreshHarvest,1L,FOODS_1
+HOUSEHOLD_1_295,FreshHarvest Tissue Box 362,FreshHarvest,6 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_025,FreshHarvest Surface Wipes 363,FreshHarvest,1L,HOUSEHOLD_1
+FOODS_2_330,NatureSip Chocolate Cookies 364,NatureSip,250ml,FOODS_2
+HOUSEHOLD_1_305,DairyFresh Air Freshener 365,DairyFresh,750g,HOUSEHOLD_1
+FOODS_1_017,MorningBrew Corn Flakes 366,MorningBrew,500ml,FOODS_1
+FOODS_2_199,MorningBrew Chocolate Bar 367,MorningBrew,1L,FOODS_2
+HOUSEHOLD_1_170,DairyFresh Room Spray 368,DairyFresh,12 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_393,FarmFresh Bleach Cleaner 369,FarmFresh,250g,HOUSEHOLD_1
+HOUSEHOLD_1_403,NatureSip Bleach Cleaner 370,NatureSip,1L,HOUSEHOLD_1
+HOUSEHOLD_1_065,FreshAir Toilet Cleaner 371,FreshAir,500ml,HOUSEHOLD_1
+FOODS_2_072,FreshAir Potato Chips 372,FreshAir,250ml,FOODS_2
+FOODS_2_319,NatureSip Potato Chips 373,NatureSip,1kg,FOODS_2
+FOODS_1_132,CleanPro Whole Wheat Flour 374,CleanPro,250ml,FOODS_1
+HOUSEHOLD_1_474,FreshHarvest Multi Surface Spray 375,FreshHarvest,500ml,HOUSEHOLD_1
+HOUSEHOLD_1_149,FreshAir Paper Towels 376,FreshAir,1kg,HOUSEHOLD_1
+HOUSEHOLD_1_097,DairyFresh Kitchen Cleaner 377,DairyFresh,1kg,HOUSEHOLD_1
+FOODS_1_019,FreshAir Honey 378,FreshAir,2L,FOODS_1
+FOODS_2_273,FreshAir Greek Yogurt 379,FreshAir,1kg,FOODS_2
+HOUSEHOLD_1_503,FreshAir Bathroom Cleaner 380,FreshAir,500g,HOUSEHOLD_1
+FOODS_2_394,MorningBrew Flavored Yogurt 381,MorningBrew,1kg,FOODS_2
+HOUSEHOLD_1_279,CleanPro Toilet Cleaner 382,CleanPro,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_461,HealthyStart Trash Bags 383,HealthyStart,24 Pack,HOUSEHOLD_1
+HOUSEHOLD_1_360,DairyFresh Multi Surface Spray 384,DairyFresh,500ml,HOUSEHOLD_1
+FOODS_2_132,DairyFresh Chocolate Bar 385,DairyFresh,1L,FOODS_2
+FOODS_2_358,CleanPro Protein Bar 386,CleanPro,24 Pack,FOODS_2
+FOODS_2_240,CleanPro Chicken Nuggets 387,CleanPro,2L,FOODS_2
+FOODS_2_188,PowerRush Ice Pops 388,PowerRush,250g,FOODS_2
+FOODS_2_196,DairyFresh Protein Bar 389,DairyFresh,24 Pack,FOODS_2
+FOODS_2_260,SoftHome Chicken Nuggets 390,SoftHome,1kg,FOODS_2
+FOODS_2_156,HealthyStart Soft Drink 391,HealthyStart,250ml,FOODS_2
+FOODS_1_138,DairyFresh Arabica Coffee 392,DairyFresh,12 Pack,FOODS_1
+FOODS_1_204,SoftHome Mayonnaise 393,SoftHome,12 Pack,FOODS_1
+HOUSEHOLD_1_379,QuickBite Floor Cleaner 394,QuickBite,750g,HOUSEHOLD_1
+FOODS_1_052,DairyFresh Peanut Butter 395,DairyFresh,6 Pack,FOODS_1
+HOUSEHOLD_1_230,CreamWorld Fabric Softener 396,CreamWorld,250g,HOUSEHOLD_1
+HOUSEHOLD_1_475,SnackMax Garbage Liners 397,SnackMax,250ml,HOUSEHOLD_1
+FOODS_1_176,HealthyStart Peanut Butter 398,HealthyStart,500ml,FOODS_1
+FOODS_1_102,FarmFresh Organic Rice 399,FarmFresh,500ml,FOODS_1
+HOUSEHOLD_1_424,DairyFresh Room Spray 400,DairyFresh,250ml,HOUSEHOLD_1
