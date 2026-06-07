@@ -1141,7 +1141,7 @@ sales_long.reset_index(drop=True, inplace=True)
 
 sku_list = sales_long["item_id"].unique()
 print(f"  Long table: {sales_long.shape} | "
-      f"{sales_long['date'].min().date()} → {sales_long['date'].max().date()}")
+      f"{sales_long['date'].min().date()} -> {sales_long['date'].max().date()}")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 3. EDA — DATASET OVERVIEW
@@ -1152,7 +1152,7 @@ dept_dist = sales_long.drop_duplicates("item_id")["dept_id"].value_counts()
 missing   = sales_long.isnull().sum()
 
 print(f"\n  Unique SKUs   : {len(sku_list)}")
-print(f"  Date range    : {sales_long['date'].min().date()} → {sales_long['date'].max().date()}")
+print(f"  Date range    : {sales_long['date'].min().date()} -> {sales_long['date'].max().date()}")
 print(f"  Total rows    : {len(sales_long):,}")
 print(f"\n  Department distribution:")
 for dept, cnt in dept_dist.items():
@@ -1339,7 +1339,7 @@ def assign_xyz_quantile(cv):
 sku_stats["xyz_class"]   = sku_stats["cv"].apply(assign_xyz_quantile)
 sku_stats["abc_xyz"]     = sku_stats["abc_class"] + sku_stats["xyz_class"]
 
-print(f"\n  CV thresholds — X ≤ {cv_p33:.3f}  |  Y ≤ {cv_p66:.3f}  |  Z > {cv_p66:.3f}")
+print(f"\n  CV thresholds - X <= {cv_p33:.3f}  |  Y <= {cv_p66:.3f}  |  Z > {cv_p66:.3f}")
 print(f"\n  ABC distribution:\n{sku_stats['abc_class'].value_counts().sort_index().to_string()}")
 print(f"\n  XYZ distribution:\n{sku_stats['xyz_class'].value_counts().sort_index().to_string()}")
 print(f"\n  ABC-XYZ Matrix:")
@@ -1652,7 +1652,7 @@ feature_cols = [
 eda_features = sku_stats[feature_cols].copy()
 eda_features.to_csv(OUT_DIR / "eda_sku_features.csv", index=False)
 print(f"\n  Saved: eda_sku_features.csv  "
-      f"({len(eda_features)} SKUs × {len(feature_cols)} features)")
+      f"({len(eda_features)} SKUs x {len(feature_cols)} features)")
 print(eda_features.columns.to_list())
 # ─────────────────────────────────────────────────────────────────────────────
 # 10. DEMAND FORECASTING — LightGBM v2
@@ -1860,12 +1860,12 @@ sku_rmse = (
     .reset_index(name="sku_rmse")
 )
 
-print(f"\n  ── Validation Metrics ────────────────────────────────")
+print(f"\n  == Validation Metrics ================================")
 print(f"  RMSE            : {rmse:.4f}")
 print(f"  MAE             : {mae:.4f}")
 print(f"  MAPE            : {mape:.2f}%  (non-zero days only)")
-print(f"  WMAPE           : {wmape:.2f}%  (demand-weighted — headline metric)")
-print(f"\n  Per-SKU RMSE — p25/p50/p75/p90:")
+print(f"  WMAPE           : {wmape:.2f}%  (demand-weighted - headline metric)")
+print(f"\n  Per-SKU RMSE - p25/p50/p75/p90:")
 q = sku_rmse["sku_rmse"].quantile([0.25,0.5,0.75,0.90])
 print(f"    {q[0.25]:.3f} / {q[0.5]:.3f} / {q[0.75]:.3f} / {q[0.90]:.3f}")
 
@@ -2035,21 +2035,21 @@ print("\n" + "=" * 70)
 print("  PIPELINE v2 COMPLETE")
 print("=" * 70)
 print(f"""
-  Validation  →  RMSE: {rmse:.4f}  MAE: {mae:.4f}
+  Validation  ->  RMSE: {rmse:.4f}  MAE: {mae:.4f}
                  MAPE: {mape:.2f}% (non-zero)  WMAPE: {wmape:.2f}% (headline)
-  Training    →  {elapsed:.1f}s  |  {model.best_iteration_} trees  |  Tweedie objective
+  Training    ->  {elapsed:.1f}s  |  {model.best_iteration_} trees  |  Tweedie objective
 
   outputs/
-  ├── eda_sku_features.csv          ← {len(eda_features)} SKUs × {len(feature_cols)} features
-  ├── forecast_7_days.csv           ← {len(fc7_df):,} rows
-  ├── forecast_30_days.csv          ← {len(fc30_df):,} rows
+  ├── eda_sku_features.csv          <- {len(eda_features)} SKUs x {len(feature_cols)} features
+  ├── forecast_7_days.csv           <- {len(fc7_df):,} rows
+  ├── forecast_30_days.csv          <- {len(fc30_df):,} rows
   ├── eda_plots/  (6 charts)
   └── forecast_plots/
       ├── 00_feature_importance.png
       ├── 01_sku_rmse_distribution.png
-      └── forecast_<SKU>.png  ×3
+      └── forecast_<SKU>.png  x3
 
-  Next → Module 3: Inventory Gap Detection
+  Next -> Module 3: Inventory Gap Detection
          inputs: eda_sku_features.csv + forecast_30_days.csv
 """)
 print("=" * 70)
