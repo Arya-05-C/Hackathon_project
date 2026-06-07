@@ -17,6 +17,7 @@ export interface DashboardData {
   emergency_procurements: number;
   total_shortage_quantity: number;
   total_recommended_po_qty: number;
+  revenue_at_risk: number;
   priority_distribution: DistributionEntry[];
   category_distribution: DistributionEntry[];
   department_distribution: DistributionEntry[];
@@ -62,6 +63,7 @@ export interface SKUDetails {
   procurement_priority: string;
   procurement_reason: string;
   recommended_po_qty: number;
+  revenue_at_risk: number;
   inventory_risk_score: number;
   projected_stockout_date: string;
   suppliers: SupplierInfo[];

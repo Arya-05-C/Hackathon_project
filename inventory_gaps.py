@@ -70,7 +70,8 @@ risk_cols = [
     "safety_stock_95",
     "reorder_point_lt_med",
     "stockout_risk_score",
-    "procurement_risk_tier"
+    "procurement_risk_tier",
+    "mean_price"
 ]
 
 df = df.merge(
@@ -79,7 +80,7 @@ df = df.merge(
     how="left",
     suffixes=("", "_eda")
 )
-
+print(df.columns.tolist())
 # ==========================================================
 # CLEAN NULLS
 # ==========================================================
@@ -360,15 +361,15 @@ df["procurement_reason"] = df.apply(
 
 df["recommended_po_qty"] = (
     df["shortage_quantity"]
-    +
-    (0.25 * df["forecast_30d"])
-)
-
-df["recommended_po_qty"] = (
-    df["recommended_po_qty"]
     .round()
     .astype(int)
 )
+
+df["revenue_at_risk"] = (
+    df["shortage_quantity"]
+    * df["mean_price"]
+).round(2)
+
 
 # ==========================================================
 # OUTPUT
@@ -400,7 +401,9 @@ output_cols = [
     "procurement_category",
     "procurement_reason",
 
-    "recommended_po_qty"
+    "recommended_po_qty",
+    "revenue_at_risk",
+   
 ]
 
 output = df[output_cols]
@@ -421,7 +424,7 @@ print(
     output["procurement_priority"]
     .value_counts()
 )
-
+print(output.columns.tolist())
 print("\nProcurement Alerts")
 print(
     output["procurement_alert"]
@@ -457,3 +460,4 @@ print(
 )
 
 print(f"\nSaved: {OUTPUT_FILE}")
+

@@ -1,36 +1,36 @@
 'use client';
 
-import React, { useState, useEffect, use } from 'react';
-import { useRouter } from 'next/navigation';
-import { 
-  fetchSKUDetails, 
-  rankSuppliers, 
-  optimizeProcurement 
-} from '../../../lib/api';
-import { 
-  SKUDetails, 
-  RankedSupplier, 
-  OptimizationResult 
-} from '../../../types';
-import { 
-  ArrowLeft, 
-  Loader2, 
-  AlertTriangle, 
-  Info, 
-  Sliders, 
-  TrendingUp, 
-  DollarSign, 
-  ArrowRightLeft
-} from 'lucide-react';
 import {
-  BarChart,
+  AlertTriangle,
+  ArrowLeft,
+  ArrowRightLeft,
+  DollarSign,
+  Info,
+  Loader2,
+  Sliders,
+  TrendingUp
+} from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { use, useEffect, useState } from 'react';
+import {
   Bar,
-  XAxis,
-  Tooltip,
+  BarChart,
+  Cell,
   ResponsiveContainer,
-  Cell
+  Tooltip,
+  XAxis
 } from 'recharts';
 import CopilotChat from '../../../components/CopilotChat';
+import {
+  fetchSKUDetails,
+  optimizeProcurement,
+  rankSuppliers
+} from '../../../lib/api';
+import {
+  OptimizationResult,
+  RankedSupplier,
+  SKUDetails
+} from '../../../types';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -222,6 +222,15 @@ export default function SKUDetailPage({ params }: PageProps) {
                 <span className="text-[10px] text-white/40 font-bold uppercase tracking-wider">Stockout Horizon</span>
                 <p className="text-xl font-bold text-rose-400 mt-1">{sku.days_until_stockout} Days</p>
               </div>
+            </div>
+
+            <div className="bg-black/20 p-3.5 rounded-xl border border-white/5">
+              <span className="text-[10px] text-white/40 font-bold uppercase tracking-wider">
+                Revenue Exposure
+              </span>
+              <p className="text-xl font-bold text-amber-400 mt-1">
+                ${Math.round(sku.revenue_at_risk).toLocaleString()}
+              </p>
             </div>
             
             <div className="space-y-3.5 text-sm pt-2">

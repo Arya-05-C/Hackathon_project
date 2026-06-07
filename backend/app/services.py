@@ -60,6 +60,7 @@ def get_dashboard_data() -> DashboardResponse:
     emergency_procurements = int((df["procurement_category"] == "Emergency").sum())
     total_shortage_quantity = int(df["shortage_quantity"].sum())
     total_recommended_po_qty = int(df["recommended_po_qty"].sum())
+    total_revenue_at_risk = round(df["revenue_at_risk"].sum(),2)
     
     # Priority Distribution
     priority_counts = df["procurement_priority"].value_counts()
@@ -101,6 +102,7 @@ def get_dashboard_data() -> DashboardResponse:
         emergency_procurements=emergency_procurements,
         total_shortage_quantity=total_shortage_quantity,
         total_recommended_po_qty=total_recommended_po_qty,
+        revenue_at_risk=total_revenue_at_risk,
         priority_distribution=priority_dist,
         category_distribution=category_dist,
         department_distribution=dept_dist,
@@ -191,7 +193,7 @@ def get_sku_details(item_id: str) -> Optional[SKUDetailsResponse]:
                     capacity_units=int(map_row["capacity_units"])
                 )
             )
-            
+            print("Revenue:", row["revenue_at_risk"])
     return SKUDetailsResponse(
         item_id=str(row["item_id"]),
         product_name=str(row["product_name"]),
@@ -205,6 +207,7 @@ def get_sku_details(item_id: str) -> Optional[SKUDetailsResponse]:
         procurement_priority=str(row["procurement_priority"]),
         procurement_reason=str(row["procurement_reason"]),
         recommended_po_qty=int(row["recommended_po_qty"]),
+        revenue_at_risk=float(row["revenue_at_risk"]),
         inventory_risk_score=float(row["inventory_risk_score"]),
         projected_stockout_date=str(row["projected_stockout_date"]),
         suppliers=suppliers_list
