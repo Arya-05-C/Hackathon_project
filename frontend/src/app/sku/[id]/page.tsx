@@ -20,7 +20,8 @@ import {
   Sliders, 
   TrendingUp, 
   DollarSign, 
-  ArrowRightLeft
+  ArrowRightLeft,
+  Keyboard
 } from 'lucide-react';
 import {
   BarChart,
@@ -56,6 +57,7 @@ export default function SKUDetailPage({ params }: PageProps) {
     quality_weight: 20,
     risk_weight: 20
   });
+  const [inputMode, setInputMode] = useState<'slider' | 'manual'>('slider');
 
   // Load SKU data on mount
   useEffect(() => {
@@ -106,9 +108,24 @@ export default function SKUDetailPage({ params }: PageProps) {
     setWeights(newWeights);
   };
 
+  // Handle Independent Weight Updates (no auto-normalization)
+  const handleManualWeightChange = (key: keyof typeof weights, value: number) => {
+    setWeights(prev => ({
+      ...prev,
+      [key]: value
+    }));
+  };
+
+  // Compute Total Weight validation
+  const totalWeight = Object.values(weights).reduce((a, b) => a + b, 0);
+  const isValidWeight = totalWeight === 100;
+
   // Re-trigger Ranking & Optimization when weights or quantity changes
   useEffect(() => {
     if (!sku) return;
+
+    // In manual mode, do not call backend unless total weight is exactly 100%
+    if (inputMode === 'manual' && totalWeight !== 100) return;
 
     // Fetch ranked suppliers
     rankSuppliers(id, weights)
@@ -124,7 +141,7 @@ export default function SKUDetailPage({ params }: PageProps) {
       })
       .catch(err => console.error("Error optimizing procurement:", err));
 
-  }, [sku, weights, poQty, id]);
+  }, [sku, weights, poQty, id, inputMode, totalWeight]);
 
   if (loading) {
     return (
@@ -275,39 +292,120 @@ export default function SKUDetailPage({ params }: PageProps) {
                 <Sliders className="w-5 h-5 text-indigo-400" />
                 <h3 className="font-bold text-white text-base">Supplier Recommendation Studio</h3>
               </div>
-              <span className="text-[10px] text-indigo-300 font-bold bg-indigo-500/10 px-2 py-1 rounded border border-indigo-500/20 uppercase tracking-wide">
-                Total weight: 100%
-              </span>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setWeights({
+                    cost_weight: 20,
+                    lead_time_weight: 20,
+                    reliability_weight: 20,
+                    quality_weight: 20,
+                    risk_weight: 20
+                  })}
+                  className="text-[10px] bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded border border-indigo-500/20 font-bold cursor-pointer transition-colors"
+                >
+                  Equalize (20% each)
+                </button>
+                <span className={`text-[10px] font-bold px-2 py-1 rounded border uppercase tracking-wide transition-all ${
+                  isValidWeight
+                    ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'
+                    : 'text-rose-400 bg-rose-500/10 border-rose-500/20 animate-pulse'
+                }`}>
+                  Total weight: {totalWeight}% {isValidWeight ? '✓' : '(Must equal 100%)'}
+                </span>
+              </div>
             </div>
 
             {/* Weights Sliders Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              {[
-                { key: 'cost_weight', label: 'Cost Weight', color: 'bg-rose-500' },
-                { key: 'lead_time_weight', label: 'Lead Time Weight', color: 'bg-amber-500' },
-                { key: 'reliability_weight', label: 'Reliability Weight', color: 'bg-emerald-500' },
-                { key: 'quality_weight', label: 'Quality Weight', color: 'bg-blue-500' },
-                { key: 'risk_weight', label: 'Risk Weight', color: 'bg-purple-500' }
-              ].map((slider) => {
-                const val = weights[slider.key as keyof typeof weights];
-                return (
-                  <div key={slider.key} className="space-y-2.5">
-                    <div className="flex justify-between text-xs font-semibold">
-                      <span className="text-white/60">{slider.label}</span>
-                      <span className="text-indigo-400 font-bold">{Math.round(val)}%</span>
+            {inputMode === 'slider' ? (
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                {[
+                  { key: 'cost_weight', label: 'Cost Weight' },
+                  { key: 'lead_time_weight', label: 'Lead Time Weight' },
+                  { key: 'reliability_weight', label: 'Reliability Weight' },
+                  { key: 'quality_weight', label: 'Quality Weight' },
+                  { key: 'risk_weight', label: 'Risk Weight' }
+                ].map((slider) => {
+                  const val = weights[slider.key as keyof typeof weights];
+                  return (
+                    <div key={slider.key} className="space-y-2.5">
+                      <div className="flex justify-between text-xs font-semibold">
+                        <span className="text-white/60">{slider.label}</span>
+                        <span className="text-indigo-400 font-bold">{Math.round(val)}%</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value={val}
+                        onChange={(e) => handleWeightChange(slider.key as keyof typeof weights, Number(e.target.value))}
+                        className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                      />
                     </div>
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      value={val}
-                      onChange={(e) => handleWeightChange(slider.key as keyof typeof weights, Number(e.target.value))}
-                      className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-indigo-500"
-                    />
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+            ) : (
+              /* Manual Input Mode Layout */
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                {[
+                  { key: 'cost_weight', label: 'Cost Weight' },
+                  { key: 'lead_time_weight', label: 'Lead Time Weight' },
+                  { key: 'reliability_weight', label: 'Reliability Weight' },
+                  { key: 'quality_weight', label: 'Quality Weight' },
+                  { key: 'risk_weight', label: 'Risk Weight' }
+                ].map((inputItem) => {
+                  const val = weights[inputItem.key as keyof typeof weights];
+                  return (
+                    <div key={inputItem.key} className="space-y-2">
+                      <label className="block text-xs font-semibold text-white/60">{inputItem.label}</label>
+                      <div className="relative rounded-xl border border-white/10 bg-black/20 focus-within:border-indigo-500/50 transition-all flex items-center px-3 py-2">
+                        <input
+                          type="number"
+                          min="0"
+                          max="100"
+                          value={val === 0 ? '' : val}
+                          placeholder="0"
+                          onChange={(e) => handleManualWeightChange(inputItem.key as keyof typeof weights, Math.min(100, Math.max(0, Number(e.target.value))))}
+                          className="w-full bg-transparent text-sm font-bold text-white outline-none border-none text-left [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                        />
+                        <span className="text-white/30 text-xs font-bold font-mono select-none">%</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Input Mode Toggle Link/Button */}
+            <div className="flex justify-end pt-2 border-t border-white/5">
+              <button
+                type="button"
+                onClick={() => setInputMode(inputMode === 'slider' ? 'manual' : 'slider')}
+                className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300 font-semibold transition-colors cursor-pointer"
+              >
+                {inputMode === 'slider' ? (
+                  <>
+                    <Keyboard className="w-3.5 h-3.5" />
+                    Switch to Manual Keypad Entry
+                  </>
+                ) : (
+                  <>
+                    <Sliders className="w-3.5 h-3.5" />
+                    Switch to Slider Adjustment Mode
+                  </>
+                )}
+              </button>
             </div>
+
+            {inputMode === 'manual' && !isValidWeight && (
+              <div className="flex items-center gap-2 p-3.5 bg-rose-500/10 border border-rose-500/20 text-rose-400 rounded-xl text-xs font-medium">
+                <AlertTriangle className="w-4 h-4 shrink-0" />
+                <span>
+                  The total sum of weights is currently <strong>{totalWeight}%</strong>. Please adjust the values so they equal exactly <strong>100%</strong> to recalculate supplier rankings.
+                </span>
+              </div>
+            )}
 
             {/* Ranked Candidates Table */}
             <div className="space-y-3">

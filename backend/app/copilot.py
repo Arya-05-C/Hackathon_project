@@ -106,6 +106,32 @@ def retrieve_context(item_id: Optional[str] = None, query: Optional[str] = None)
             ]
         }
         
+    # If no item_id and no specific department matched, load general platform critical list
+    if not context:
+        items = services.get_procurement_items()
+        # Find the most critical items (highest shortage quantity, priority is Critical)
+        critical_items = [i for i in items if i.procurement_priority.lower() == 'critical']
+        if not critical_items:
+            critical_items = [i for i in items if i.shortage_quantity > 0]
+        
+        # Sort by shortage quantity descending
+        critical_items = sorted(critical_items, key=lambda x: x.shortage_quantity, reverse=True)
+        
+        if critical_items:
+            context["critical_items"] = [
+                {
+                    "item_id": i.item_id,
+                    "product_name": i.product_name,
+                    "dept_id": i.dept_id,
+                    "available_inventory": i.available_inventory,
+                    "forecast_30d": i.forecast_30d,
+                    "shortage_quantity": i.shortage_quantity,
+                    "priority": i.procurement_priority,
+                    "reason": i.procurement_reason
+                }
+                for i in critical_items[:5]  # Top 5 most critical items
+            ]
+        
     return context
 
 # ==========================================================
@@ -172,6 +198,28 @@ def generate_fallback_response(query: str, context: Dict[str, Any]) -> str:
             f"**Root Causes**: These shortages are driven by recent demand surges exceeding safety stock thresholds and long supplier lead times in the {dept} division."
         )
         
+    # Platform critical list query
+    critical_items = context.get("critical_items")
+    if critical_items:
+        # If the user asks for critical/alert/shortage/worst items
+        if any(x in q_lower for x in ["critical", "alert", "shortage", "worst", "stockout", "most important", "which item"]):
+            top_item = critical_items[0]
+            crit_lines = []
+            for item in critical_items[:3]:
+                crit_lines.append(
+                    f"- **{item['product_name']}** (`{item['item_id']}`): Shortage of **{item['shortage_quantity']}** units in {item['dept_id']} "
+                    f"(Current Stock: {item['available_inventory']}, Reason: `{item['reason']}`)."
+                )
+            crit_text = "\n".join(crit_lines)
+            return (
+                f"### Platform Critical Inventory Alerts:\n\n"
+                f"Based on current inventory levels, the most critical item is **{top_item['product_name']}** (`{top_item['item_id']}`) "
+                f"which is flagged with **{top_item['priority']}** priority due to: `{top_item['reason']}`.\n\n"
+                f"**Top 3 items with active supply gaps needing immediate replenishment:**\n"
+                f"{crit_text}\n\n"
+                f"**Recommendation**: Please navigate to the SKU detail pages for these items to configure supplier weights and generate optimized purchase orders."
+            )
+
     return (
         "### Procurement Copilot Advisor:\n\n"
         "Please query about a specific item code (e.g. `FOODS_2_197` or `HOUSEHOLD_1_032`) or a department category to get structured insights.\n\n"

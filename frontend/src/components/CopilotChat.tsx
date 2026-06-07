@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { askCopilot } from '../lib/api';
 import { ChatMessage } from '../types';
+import ReactMarkdown from 'react-markdown';
 
 interface CopilotChatProps {
   activeItemId?: string;
@@ -159,8 +160,12 @@ export default function CopilotChat({ activeItemId, activeItemName }: CopilotCha
                       : 'bg-indigo-600 text-white border-transparent rounded-tr-none'
                   }`}
                 >
-                  <div className="whitespace-pre-line font-normal prose prose-invert max-w-none">
-                    {msg.content}
+                  <div className="font-normal prose prose-invert max-w-none">
+                    {isBot ? (
+                      <ReactMarkdown>{msg.content}</ReactMarkdown>
+                    ) : (
+                      <div className="whitespace-pre-line">{msg.content}</div>
+                    )}
                   </div>
                 </div>
               </div>

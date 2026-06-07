@@ -80,3 +80,55 @@ body {
   color: #9CA3AF !important;
   font-weight: 500 !important;
 }
+
+/* Chatbot Markdown Prose Styling */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.prose h3 {
+  font-size: 1.125rem;
+}
+.prose p {
+  margin-bottom: 0.75rem;
+}
+.prose p:last-child {
+  margin-bottom: 0;
+}
+.prose ul, .prose ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  list-style-position: outside;
+}
+.prose ul {
+  list-style-type: disc;
+}
+.prose ol {
+  list-style-type: decimal;
+}
+.prose li {
+  margin-bottom: 0.25rem;
+}
+.prose strong {
+  font-weight: 600;
+  color: #6366F1; /* Indigo accents for highlighted text */
+}
+.prose em {
+  font-style: italic;
+}
+.prose code {
+  font-family: monospace;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+.prose pre {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 0.75rem;
+}
