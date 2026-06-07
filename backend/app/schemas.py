@@ -22,6 +22,7 @@ class DashboardResponse(BaseModel):
     emergency_procurements: int
     total_shortage_quantity: int
     total_recommended_po_qty: int
+    revenue_at_risk: float
     priority_distribution: List[DistributionEntry]
     category_distribution: List[DistributionEntry]
     department_distribution: List[DistributionEntry]
@@ -72,6 +73,7 @@ class SKUDetailsResponse(BaseModel):
     procurement_priority: str
     procurement_reason: str
     recommended_po_qty: int
+    revenue_at_risk: float
     inventory_risk_score: float
     projected_stockout_date: str
     suppliers: List[SupplierInfo]

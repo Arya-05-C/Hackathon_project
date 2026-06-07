@@ -1500,6 +1500,16 @@ Procurement Risk Tier:
 
 sigma_lt = (LT_MAX - LT_MIN) / 4   # ≈ 2.75 days std dev on lead time
 
+
+PATTERN_MULTIPLIER = {
+    "Smooth": 1.00,
+    "Erratic": 1.05,
+    "Intermittent": 1.15,
+    "Lumpy": 1.30
+}
+
+
+
 def safety_stock(mean_d, std_d, lt, z):
     return z * std_d * np.sqrt(lt)
 
@@ -1527,17 +1537,50 @@ def procurement_risk_tier(row):
 sku_stats["avg_daily_demand"]         = sku_stats["mean_demand"]
 sku_stats["demand_std"]               = sku_stats["std_demand"]
 sku_stats["coefficient_of_variation"] = sku_stats["cv"]
+sku_stats["pattern_multiplier"] = (
+    sku_stats["demand_pattern"]
+    .map(PATTERN_MULTIPLIER)
+    .fillna(1.0)
+)
 
 # Safety stock at 3 service levels
-sku_stats["safety_stock_95"]   = sku_stats.apply(
-    lambda r: safety_stock(r["avg_daily_demand"], r["demand_std"], LT_MED, Z_95), axis=1
+sku_stats["safety_stock_95"] = (
+    sku_stats.apply(
+        lambda r: safety_stock(
+            r["avg_daily_demand"],
+            r["demand_std"],
+            LT_MED,
+            Z_95
+        ),
+        axis=1
+    )
+    * sku_stats["pattern_multiplier"]
 ).round(3)
-sku_stats["safety_stock_98"]   = sku_stats.apply(
-    lambda r: safety_stock(r["avg_daily_demand"], r["demand_std"], LT_MED, Z_98), axis=1
+sku_stats["safety_stock_98"] = (
+    sku_stats.apply(
+        lambda r: safety_stock(
+            r["avg_daily_demand"],
+            r["demand_std"],
+            LT_MED,
+            Z_98
+        ),
+        axis=1
+    )
+    * sku_stats["pattern_multiplier"]
 ).round(3)
-sku_stats["safety_stock_99"]   = sku_stats.apply(
-    lambda r: safety_stock(r["avg_daily_demand"], r["demand_std"], LT_MED, Z_99), axis=1
+sku_stats["safety_stock_99"] = (
+    sku_stats.apply(
+        lambda r: safety_stock(
+            r["avg_daily_demand"],
+            r["demand_std"],
+            LT_MED,
+            Z_99
+        ),
+        axis=1
+    )
+    * sku_stats["pattern_multiplier"]
 ).round(3)
+
 # With LT variability (for risk-aware procurement)
 sku_stats["safety_stock_lt_risk"] = sku_stats.apply(
     lambda r: safety_stock_lt_risk(r["avg_daily_demand"], r["demand_std"],
@@ -1610,7 +1653,7 @@ eda_features = sku_stats[feature_cols].copy()
 eda_features.to_csv(OUT_DIR / "eda_sku_features.csv", index=False)
 print(f"\n  Saved: eda_sku_features.csv  "
       f"({len(eda_features)} SKUs × {len(feature_cols)} features)")
-
+print(eda_features.columns.to_list())
 # ─────────────────────────────────────────────────────────────────────────────
 # 10. DEMAND FORECASTING — LightGBM v2
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1654,11 +1697,26 @@ FEATURE_COLS = (
     + ["non_zero_28","non_zero_90"]
     + ["dow","month_feat","is_event","is_snap"]
     + ["abc_enc","xyz_enc","vel_enc","pattern_enc"]
+    + ["adi_feat","cv2_feat","zero_rate_feat","sale_frequency_feat"]
+    + ["price_std_feat","price_cv_feat","price_range_pct_feat"]
 )
 
 sku_meta_map = (
     sku_stats.set_index("item_id")[
-        ["abc_class","xyz_class","velocity_class","demand_pattern"]
+        [
+            "abc_class",
+            "xyz_class",
+            "velocity_class",
+            "demand_pattern",
+            "adi",
+            "cv2",
+            "zero_rate",
+            "sale_frequency",
+            "price_std",
+            "price_cv",
+            "price_range_pct",
+            
+        ]
     ].to_dict(orient="index")
 )
 
@@ -1717,6 +1775,13 @@ def build_features(ts: pd.DataFrame, sku_id: str, meta: dict) -> pd.DataFrame:
     df["xyz_enc"]     = XYZ_ENC.get(meta.get("xyz_class","Z"), 2)
     df["vel_enc"]     = VEL_ENC.get(meta.get("velocity_class","Slow"), 2)
     df["pattern_enc"] = PATTERN_ENC.get(meta.get("demand_pattern","Lumpy"), 3)
+    df["adi_feat"] = meta.get("adi", 0)
+    df["cv2_feat"] = meta.get("cv2", 0)
+    df["zero_rate_feat"] = meta.get("zero_rate", 0)
+    df["sale_frequency_feat"] = meta.get("sale_frequency", 0)
+    df["price_std_feat"] = meta.get("price_std", 0)
+    df["price_cv_feat"] = meta.get("price_cv", 0)
+    df["price_range_pct_feat"] = meta.get("price_range_pct", 0)
 
     df.dropna(subset=FEATURE_COLS, inplace=True)
     return df
@@ -1753,7 +1818,7 @@ params = {
     "metric"                : "rmse",
     "n_estimators"          : 1000,
     "learning_rate"         : 0.04,
-    "num_leaves"            : 63,
+    "num_leaves"            : 127,
     "min_child_samples"     : 20,
     "feature_fraction"      : 0.75,
     "bagging_fraction"      : 0.75,
@@ -1896,6 +1961,16 @@ def recursive_forecast(model, sku_id, history, future_cal, n_steps, meta):
         row["xyz_enc"]     = XYZ_ENC.get(meta.get("xyz_class","Z"), 2)
         row["vel_enc"]     = VEL_ENC.get(meta.get("velocity_class","Slow"), 2)
         row["pattern_enc"] = PATTERN_ENC.get(meta.get("demand_pattern","Lumpy"), 3)
+            # Intermittency features
+        row["adi_feat"] = meta.get("adi", 0)
+        row["cv2_feat"] = meta.get("cv2", 0)
+        row["zero_rate_feat"] = meta.get("zero_rate", 0)
+        row["sale_frequency_feat"] = meta.get("sale_frequency", 0)
+
+        # Price profile features
+        row["price_std_feat"] = meta.get("price_std", 0)
+        row["price_cv_feat"] = meta.get("price_cv", 0)
+        row["price_range_pct_feat"] = meta.get("price_range_pct", 0)
 
         x    = pd.DataFrame([row])[FEATURE_COLS]
         pred = max(0.0, float(model.predict(x)[0]))
@@ -1951,6 +2026,11 @@ for sku in sample_skus[:3]:
 # ─────────────────────────────────────────────────────────────────────────────
 # PIPELINE SUMMARY
 # ─────────────────────────────────────────────────────────────────────────────
+
+print(imp_df.sort_values(
+    "importance",
+    ascending=False
+).head(20).to_string(index=False))
 print("\n" + "=" * 70)
 print("  PIPELINE v2 COMPLETE")
 print("=" * 70)

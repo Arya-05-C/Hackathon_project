@@ -24,12 +24,12 @@ import {
   Keyboard
 } from 'lucide-react';
 import {
-  BarChart,
   Bar,
-  XAxis,
-  Tooltip,
+  BarChart,
+  Cell,
   ResponsiveContainer,
-  Cell
+  Tooltip,
+  XAxis
 } from 'recharts';
 import CopilotChat from '../../../components/CopilotChat';
 
@@ -239,6 +239,15 @@ export default function SKUDetailPage({ params }: PageProps) {
                 <span className="text-[10px] text-white/40 font-bold uppercase tracking-wider">Stockout Horizon</span>
                 <p className="text-xl font-bold text-rose-400 mt-1">{sku.days_until_stockout} Days</p>
               </div>
+            </div>
+
+            <div className="bg-black/20 p-3.5 rounded-xl border border-white/5">
+              <span className="text-[10px] text-white/40 font-bold uppercase tracking-wider">
+                Revenue Exposure
+              </span>
+              <p className="text-xl font-bold text-amber-400 mt-1">
+                ${Math.round(sku.revenue_at_risk).toLocaleString()}
+              </p>
             </div>
             
             <div className="space-y-3.5 text-sm pt-2">
